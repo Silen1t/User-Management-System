@@ -1,0 +1,36 @@
+﻿@using UserManagementSystem.Models
+@model AccountModel
+@{
+    ViewData["Title"] = "SignUp";
+}
+
+<div class="align-content-center">
+    <h2 class="w-100">@ViewData["Title"]</h2>
+    <form class="flex-column column-gap-2" method="post">
+        <div class="mb-3 col-lg-3">
+            <label asp-for="Name" class="text-start"></label>
+            <input class="input-group-text form-control" asp-for="Name" type="text" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3 col-lg-3">
+            <label asp-for="Email"  class="text-start"></label>
+            <input class="input-group-text form-control" asp-for="Email" type="email"/>
+            <span asp-validation-for="Email"  class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" class="text-start"></label>
+            <input class="input-group-text form-control-sm" asp-for="Password" type="text" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">SignUp</button>
+        </div>
+
+        <div class="mb-5">
+            <label class="lead">Already have an account?</label>
+            <a class="lead" style="color:green; text-decoration:none;" asp-controller="Home" asp-action="SignIn">SignIn</a>
+        </div>
+    </form>
+</div>
