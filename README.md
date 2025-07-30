@@ -50,5 +50,5 @@ Includes account deletion and real-time form validation for a smooth user experi
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/user-management-system.git
+   git clone https://github.com/Silen1t/User-Management-System.git
    cd user-management-system
